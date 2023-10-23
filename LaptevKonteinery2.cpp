@@ -113,5 +113,7 @@ int main() {
     std::cout << std::setprecision(5) << "Simpson= " << result_simpsons << std::endl;
     std::cout << "Newton " << result_newton << std::endl;
 
+    delete[] x;
+    delete[] y;
     return 0;
 }
