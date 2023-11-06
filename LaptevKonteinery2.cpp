@@ -93,25 +93,25 @@ int main() {
     }
 
 
-    Integral integral(x, y, n);
+    Integral integr(x, y, n);
 
-    double result_left = integral.leftRectangleMethod();
-    double result_right = integral.rightRectangleMethod();    
-    double result_middle = integral.middleRectangleMethod(result_left, result_right);
-    double result_trapezoidal = integral.trapezoidalMethod();
-    double result_simpsons = integral.simpsonsMethod();
-    double result_newton = integral.newtonMethod(); 
+    double res_left = integr.leftRectangleMethod();
+    double res_right = integr.rightRectangleMethod();    
+    double res_middle = integr.middleRectangleMethod(res_left, res_right);
+    double res_trapezoidal = integr.trapezoidalMethod();
+    double res_simpsons = integr.simpsonsMethod();
+    double res_newton = integr.newtonMethod(); 
 
     std::cout << "input= argument ";
-    integral.print(x, n);
+    integr.print(x, n);
     std::cout << "function ";
-    integral.print(y, n);
-    std::cout << "lev priam= " << result_left << std::endl;
-    std::cout << "sr priam= " << result_middle << std::endl;
-    std::cout << "prav priam= " << result_right << std::endl;
-    std::cout << "trapeciy= " << result_trapezoidal << std::endl;
-    std::cout << std::setprecision(5) << "Simpson= " << result_simpsons << std::endl;
-    std::cout << "Newton " << result_newton << std::endl;
+    integr.print(y, n);
+    std::cout << "lev priam= " << res_left << std::endl;
+    std::cout << "sr priam= " << res_middle << std::endl;
+    std::cout << "prav priam= " << res_right << std::endl;
+    std::cout << "trapeciy= " << res_trapezoidal << std::endl;
+    std::cout << std::setprecision(5) << "Simpson= " << res_simpsons << std::endl;
+    std::cout << "Newton " << res_newton << std::endl;
 
     delete[] x;
     delete[] y;
